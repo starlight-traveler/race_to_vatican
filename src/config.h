@@ -33,11 +33,13 @@ typedef struct {
 } Level;
 
 // Scene IDs for global routing
-enum {
+enum
+{
     SCENE_MENU = 0,
     SCENE_LEVEL_BLUEBOX,
     SCENE_LEVEL_PRACTICE_440,
     SCENE_VICTORY,
+    SCENE_DEFEAT,
     SCENE_COUNT
 };
 

@@ -12,6 +12,7 @@ typedef struct
 Scene *create_menu_scene(void);
 Scene *create_level_scene(int scene_id); // uses g_levels[scene_id]
 Scene *create_victory_scene(void);
+Scene *create_defeat_scene(const char *winner_name);
 
 void scene_manager_init(SceneManager *sm, Scene *initial);
 void scene_manager_switch(SceneManager *sm, Scene *next);

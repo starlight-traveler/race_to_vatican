@@ -23,10 +23,13 @@ set(SRC_FILES
   src/dsp.c
   src/ui.c
   src/scene_manager.c
+  src/net.c                    # <-- add
   src/scenes/scene_menu.c
   src/scenes/scene_level.c
   src/scenes/scene_victory.c
+  src/scenes/scene_defeat.c    # <-- add
 )
+
 
 add_executable(${PROJECT_NAME} ${SRC_FILES})
 target_compile_definitions(${PROJECT_NAME} PRIVATE _POSIX_C_SOURCE=200809L)
