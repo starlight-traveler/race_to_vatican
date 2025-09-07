@@ -9,6 +9,7 @@
 #include "ui.h"
 #include "scene_manager.h"
 #include "net.h"
+#include <locale.h>
 
 NetSystem g_net; // global for scene access
 NetPeerState g_peer;
@@ -53,6 +54,7 @@ int main(int argc, char **argv)
     uint16_t bind_port = 55555;
     char peer_ip[64] = {0};
     uint16_t peer_port = 0;
+    setlocale(LC_ALL, "");
 
     for (int i = 1; i < argc; ++i)
     {

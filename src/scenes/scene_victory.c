@@ -3,12 +3,119 @@
 #include "scene_manager.h"
 #include "ui.h"
 #include "config.h"
+#include <string.h>
+static const char *VATICAN_WIN_ASCII[] = {
+"    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⡠⠤⠲⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ ",
+"⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡴⢛⣁⣤⣤⣤⡤⠤⠤⠄⠤⢄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀",
+"⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⠿⡿⡿⠉⠀⠈⠀⠙⡀⠀⠀⠀⠀⠈⠙⠲⢄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀",
+"⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⣾⣧⠀⡟⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡕⢄⠀⠀⠀⠀⠀⠀⠀⠀⠀",
+"⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣿⣿⣿⢸⣿⠀⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⣌⢆⠀⠀⠀⠀⠀⠀⠀⠀",
+"⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣼⣿⣿⣧⣼⣿⡆⠙⠓⠀⠘⡢⣄⡀⠀⢀⡀⠀⠀⠀⠀⠀⢻⡿⠀⠀⠀⠀⠀⠀⠀⠀",
+"⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣤⣹⣿⣿⣿⣿⣿⠁⠚⢥⣑⡒⠊⠑⠒⠒⠂⠬⢍⡂⠀⠀⣠⣼⠃⠀⠀⠀⠀⠀⠀⠀⠀",
+"⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣾⣿⣿⣿⣼⣿⣿⣿⣿⣿⣷⣦⣽⣦⠐⢪⠒⠤⠀⠀⠉⠀⠀⣹⢻⡀⠀⠀⠀⠀⠀⠀⠀⠀",
+"⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⣿⣿⣿⣿⣿⡟⠻⣿⣟⠋⠻⢿⣿⠀⢰⣿⣿⣿⣿⣷⡆⠀⢃⢰⠃⠀⠀⠀⠀⠀⠀⠀⠀",
+"⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⣿⣿⣿⣿⡇⠀⠈⠉⠉⢩⣾⣯⠀⠀⠙⠿⢷⠌⠙⠃⠀⢻⡾⠀⠀⠀⠀⠀⠀⠀⠀⠀",
+"⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⣿⣿⣿⣿⣷⡆⠀⠀⣠⣾⣿⠁⠀⠀⣄⠑⢀⠀⠀⠀⢰⣻⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀",
+"⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣼⣿⣿⣿⡿⣶⠞⣱⣿⣿⣦⣢⡠⠙⢷⣄⠢⠄⢀⡰⠏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀",
+"⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣤⣴⣶⣿⣿⣿⣿⣿⡄⢹⣿⣿⣽⣟⠛⠁⠀⢀⣈⣿⠂⠀⡞⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀",
+"⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣾⣿⣿⡁⢻⣿⣿⣿⣿⣷⡀⢿⣿⢿⣯⡍⢉⠉⠁⠋⠀⢀⡼⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀",
+"⠀⠀⠀⠀⠀⠀⠀⠀⢀⣠⣾⣿⣿⣿⣿⣦⣹⣿⣿⣿⣿⣿⣦⠙⣌⠉⠉⠉⠀⠀⢀⣠⠞⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀",
+"⠀⠀⠀⠀⠀⠀⣠⣴⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡏⡿⠿⣿⣾⣿⣒⣶⣶⣤⢀⣿⢹⣦⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀",
+"⠀⠀⠀⣠⣴⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⡄⠀⠉⠙⠛⣿⠛⠒⢉⡅⢺⣿⣿⣷⣦⣤⣤⡀⠀⠀⠀⠀⠀⠀⠀⠀",
+"⣀⣴⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠟⠀⠀⠀⢀⠇⢀⠀⠊⣀⠀⠹⣿⣿⣿⣿⣿⣿⣦⡀⠀⠀⠀⠀⠀⠀",
+"⣿⣿⣿⣿⣿⣿⣿⡿⠏⣿⣿⠻⣿⣿⣿⣿⣿⣿⣿⣿⠁⠀⠀⠀⠀⠀⠀⢾⠀⠀⠙⢧⡀⠙⣿⣿⣿⣟⠿⣏⢷⡄⠀⠀⠀⠀⠀",
+"⣿⣿⣿⣿⣿⣿⣿⠃⠀⣿⣿⠨⠍⣿⣿⣿⣿⣿⣯⡁⠀⠀⠀⠀⠀⠀⠀⢸⡄⠀⠀⠀⠱⡀⠘⢿⣿⣿⣿⣾⠏⢻⣆⠀⠀⠀⠀",
+"⣿⣿⣿⣿⣿⡿⠋⠀⠲⣿⣿⠐⠂⣿⣿⣿⣾⣿⢻⡷⣄⠀⠀⠀⠀⠀⠀⠀⢡⢠⠀⠀⠀⠙⡀⠘⡿⣿⣿⣿⣷⣄⠹⣦⠀⠀⠀",
+"⣿⣿⣿⣿⣿⠉⠀⠀⢰⣿⣿⢈⢸⣿⣿⣿⣿⡇⠀⢻⡻⣧⡀⠀⠀⠀⠀⠀⠈⡆⢀⠀⠀⠀⠱⡀⣧⠈⠿⣿⣿⣿⣦⠹⣧⠀⠀",
+"⣿⣿⣿⣿⣿⠀⠀⠀⣾⣿⣿⢼⢸⣿⣿⣿⣿⡇⠀⠀⠻⢯⣷⡀⠀⠀⠀⠀⠀⢠⡈⢆⠀⠀⠀⢣⡏⠀⠀⠙⢿⣿⣿⣧⠹⣧⠀",
+"⣿⣿⣿⣿⡟⠀⠀⠀⣿⣿⣿⠈⢸⡿⢻⣿⣿⡇⠀⠀⠀⠀⠀⠙⢦⡀⠀⠀⠀⠸⡙⢶⣧⡀⠀⠐⡷⡄⠀⠀⠀⢻⣿⣿⣿⣻⡇"};
+
+static const int VATICAN_WIN_ASCII_LINES = (int)(sizeof(VATICAN_WIN_ASCII) / sizeof(VATICAN_WIN_ASCII[0]));
 
 typedef struct
 {
     Scene base;
     uint64_t enter_ms;
 } VictoryScene;
+
+static void draw_ascii_centered(
+    const char **art, int nlines,
+    int center_y_offset,
+    int y_offset, /* additional down-shift  */
+    int x_offset) /* additional right-shift */
+{
+    int rows, cols;
+    getmaxyx(stdscr, rows, cols);
+
+    /* Measure max width of the provided art */
+    int maxw = 0;
+    for (int i = 0; i < nlines; ++i)
+    {
+        int w = (int)strlen(art[i]);
+        if (w > maxw)
+            maxw = w;
+    }
+
+    /* Intended (unclamped) top-left position */
+    int sy = center_y_offset - nlines / 2 + y_offset;
+    int sx = (cols - maxw) / 2 + x_offset;
+
+    /* Vertical clipping: if sy < 0, skip -sy lines from the source */
+    int src_i0 = 0;  /* first source line index to draw */
+    int dst_y0 = sy; /* screen y for that first line    */
+    if (dst_y0 < 0)
+    {
+        src_i0 = -dst_y0;
+        if (src_i0 > nlines)
+            return; /* everything is above the screen */
+        dst_y0 = 0;
+    }
+    if (dst_y0 >= rows)
+        return; /* everything is below the screen */
+
+    /* For each visible source line */
+    for (int i = src_i0; i < nlines; ++i)
+    {
+        int y = dst_y0 + (i - src_i0);
+        if (y >= rows)
+            break; /* bottom clipped */
+
+        const char *line = art[i];
+        int len = (int)strlen(line);
+        if (len <= 0)
+            continue;
+
+        /* Horizontal clipping */
+        int draw_x = sx; /* where on screen we try to start */
+        int src_x0 = 0;  /* how many chars we skip from the left of the line */
+
+        /* If starting before column 0, skip that many chars from the source */
+        if (draw_x < 0)
+        {
+            src_x0 = -draw_x;
+            if (src_x0 >= len)
+                continue; /* whole line is left of screen */
+            draw_x = 0;
+        }
+
+        /* Now compute how many chars we can draw */
+        int draw_len = len - src_x0;
+
+        /* If starting beyond right edge, nothing to draw */
+        if (draw_x >= cols)
+            continue;
+
+        /* Clip right edge */
+        if (draw_x + draw_len > cols)
+        {
+            draw_len = cols - draw_x;
+            if (draw_len <= 0)
+                continue;
+        }
+
+        mvaddnstr(y, draw_x, line + src_x0, draw_len);
+    }
+}
 
 static bool vic_init(Scene *s)
 {
@@ -41,6 +148,7 @@ static void vic_render(Scene *s)
     mvprintw(2, 2, ">>> LINK ESTABLISHED <<<");
     mvprintw(4, 2, "A quiet click. Then a distant voice: \"Pronto... Vaticano.\"");
     mvprintw(6, 2, "Returning to menu...");
+    draw_ascii_centered(VATICAN_WIN_ASCII, VATICAN_WIN_ASCII_LINES, 9, 5, 45);
     refresh();
 }
 
