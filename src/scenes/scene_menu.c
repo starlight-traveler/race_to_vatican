@@ -1,3 +1,4 @@
+#define _USE_MATH_DEFINES
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>
@@ -29,6 +30,12 @@
 
 #define TITLE_COLOR_PAIR 1
 #define HILITE_COLOR_PAIR 2
+
+// define M_PI for non mac os
+#ifndef M_PI
+#define M_PI 3.14159265358979323846
+#endif
+
 /* ------------------------------------------------------------------ */
 
 typedef struct
