@@ -37,6 +37,19 @@ const Level g_levels[SCENE_COUNT] = {
         .time_limit_ms = 0,
         .next_scene_id = SCENE_LEVEL_BLUEBOX},
 
+    // Pentagon scene
+    {
+        .name = "The Pentagon",
+        .blurb =
+            "You hear workers bustling around.\n"
+            "\"Who is on this line! State your ID and Clearance\""
+            "You have five seconds to leave before the government traces your call.",
+        .target_hz = 440.0f,
+        .tolerance_hz = 15.0f,
+        .hold_ms = 1200,
+        .time_limit_ms = 0,
+        .next_scene_id = SCENE_LEVEL_BLUEBOX},
+
     // SCENE_VICTORY (dummy level slot)
     {
         .name = "CONNECTED",
