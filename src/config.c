@@ -31,22 +31,22 @@ const Level g_levels[SCENE_COUNT] = {
         .blurb =
             "A tuning fork rests on the desk.\n"
             "Match its pitch to prove your ear.",
-        .target_hz = 440.0f,
+        .target_hz = 100.0f,
         .tolerance_hz = 15.0f,
-        .hold_ms = 1200,
+        .hold_ms = 100,
         .time_limit_ms = 0,
-        .next_scene_id = SCENE_LEVEL_BLUEBOX},
+        .next_scene_id = SCENE_LEVEL_PENTAGON},
 
     // Pentagon scene
     {
         .name = "The Pentagon",
         .blurb =
             "You hear workers bustling around.\n"
-            "\"Who is on this line! State your ID and Clearance\""
+            "\"Who is on this line! State your ID and Clearance\"\n"
             "You have five seconds to leave before the government traces your call.",
         .target_hz = 440.0f,
         .tolerance_hz = 15.0f,
-        .hold_ms = 1200,
+        .hold_ms = 100,
         .time_limit_ms = 0,
         .next_scene_id = SCENE_LEVEL_BLUEBOX},
 

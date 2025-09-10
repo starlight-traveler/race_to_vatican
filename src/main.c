@@ -170,6 +170,9 @@ int main(int argc, char **argv)
                 case SCENE_LEVEL_PRACTICE_440:
                     next = create_level_scene(SCENE_LEVEL_PRACTICE_440);
                     break;
+                case SCENE_LEVEL_PENTAGON:
+                    next = create_level_scene(SCENE_LEVEL_PENTAGON);
+                    break;
                 case SCENE_VICTORY:
                     next = create_victory_scene();
                     break;
