@@ -33,7 +33,7 @@ const Level g_levels[SCENE_COUNT] = {
             "Match its pitch to prove your ear.",
         .target_hz = 100.0f,
         .tolerance_hz = 15.0f,
-        .hold_ms = 100,
+        .hold_ms = 1500,
         .time_limit_ms = 0,
         .next_scene_id = SCENE_LEVEL_PENTAGON},
 
@@ -46,7 +46,7 @@ const Level g_levels[SCENE_COUNT] = {
             "You have five seconds to leave before the government traces your call.",
         .target_hz = 440.0f,
         .tolerance_hz = 15.0f,
-        .hold_ms = 100,
+        .hold_ms = 1500,
         .time_limit_ms = 0,
         .next_scene_id = SCENE_LEVEL_BLUEBOX},
 
