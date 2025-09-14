@@ -25,7 +25,7 @@
 // Tone Count and Tolerance
 
 #define TONE_COUNT         3
-#define TONE_TOLERANCE     50.0f
+#define TONE_TOLERANCE     20.0f
 
 
 typedef struct {
@@ -35,7 +35,7 @@ typedef struct {
     float tolerance_hz;          // +/- tolerance
     uint32_t hold_ms;            // time to hold target continuously
     uint32_t time_limit_ms;      // 0 for no limit
-    int next_scene_id;           // scene index after success
+    int next_scene_id[TONE_COUNT];           // scene index after success
 } Level;
 
 // Scene IDs for global routing

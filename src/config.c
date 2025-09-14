@@ -13,8 +13,8 @@ const Level g_levels[SCENE_COUNT] = {
         .tolerance_hz = 0.0f,
         .hold_ms = 0,
         .time_limit_ms = 0,
-        .next_scene_id = SCENE_MENU},
-        
+        .next_scene_id = {SCENE_MENU,0,0}},
+
     // SCENE_LEVEL_BLUEBOX
     {
         .name = "Blue Box: Vatican Trunk",
@@ -26,7 +26,7 @@ const Level g_levels[SCENE_COUNT] = {
         .tolerance_hz = 60.0f,
         .hold_ms = 1500,
         .time_limit_ms = 0,
-        .next_scene_id = SCENE_VICTORY},
+        .next_scene_id = {SCENE_VICTORY,0,0}},
 
     // SCENE_LEVEL_PRACTICE_440
     {
@@ -38,7 +38,7 @@ const Level g_levels[SCENE_COUNT] = {
         .tolerance_hz = 15.0f,
         .hold_ms = 1500,
         .time_limit_ms = 0,
-        .next_scene_id = SCENE_LEVEL_PENTAGON},
+        .next_scene_id = {SCENE_LEVEL_PENTAGON,0,SCENE_LEVEL_BLUEBOX}},
 
     // Pentagon scene
     {
@@ -51,7 +51,7 @@ const Level g_levels[SCENE_COUNT] = {
         .tolerance_hz = 15.0f,
         .hold_ms = 1500,
         .time_limit_ms = 0,
-        .next_scene_id = SCENE_LEVEL_BLUEBOX},
+        .next_scene_id = {SCENE_LEVEL_PRACTICE_440, 0, SCENE_LEVEL_BLUEBOX}},
 
     // SCENE_VICTORY (dummy level slot)
     {
@@ -61,7 +61,7 @@ const Level g_levels[SCENE_COUNT] = {
         .tolerance_hz = 0.0f,
         .hold_ms = 0,
         .time_limit_ms = 0,
-        .next_scene_id = SCENE_MENU}};
+        .next_scene_id = {SCENE_MENU,0,0}}};
 
 uint64_t cfg_now_ms(void)
 {

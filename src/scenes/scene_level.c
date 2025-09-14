@@ -30,14 +30,14 @@ typedef struct
     bool announced_win; // to send win once
 } LevelScene;
 
-static bool within_window(float freq)
+static int within_window(float freq)
 {
     for (int i = 0; i < TONE_COUNT; i++) {
         if (fabsf(freq - tone_table[i]) <= TONE_TOLERANCE) {
-            return true;
+            return i;
         }
     }
-    return false;
+    return -1;
 }
 
 static float compute_progress(uint64_t now_ms, uint64_t hold_start_ms, uint32_t needed_ms, bool in_window)
@@ -104,14 +104,16 @@ static void level_update(Scene *s, float freq, float peak, uint64_t now_ms)
 {
     LevelScene *ls = (LevelScene *)s;
     const Level *lv = &g_levels[ls->scene_id];
-
+    int next_id;
     ls->last_freq = freq;
     ls->last_peak = peak;
 
     if (freq > 0.0f)
         ui_move_player_bins(&ls->pl, freq);
 
-    if (freq > 0.0f && within_window(freq))
+    next_id = within_window(freq);
+
+    if (freq > 0.0f && next_id != -1)
     {
         if (!ls->in_window)
         {
@@ -139,7 +141,7 @@ static void level_update(Scene *s, float freq, float peak, uint64_t now_ms)
             net_send_state(&g_net, freq, ls->progress01, status, now_ms);
             ls->announced_win = true;
         }
-        s->next_scene = lv->next_scene_id;
+        s->next_scene = lv->next_scene_id[next_id];
         return;
     }
 
