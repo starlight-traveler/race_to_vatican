@@ -22,6 +22,12 @@
 #define BIN_UP_MAX         500.0f
 #define BIN_RIGHT_MAX      800.0f
 
+// Tone Count and Tolerance
+
+#define TONE_COUNT         3
+#define TONE_TOLERANCE     50.0f
+
+
 typedef struct {
     const char *name;
     const char *blurb;           // story text shown in scene
@@ -46,6 +52,8 @@ enum
 
 // Level table (indexed by scene IDs that are level scenes)
 extern const Level g_levels[];
+
+extern const float tone_table[];
 
 // Utility
 uint64_t cfg_now_ms(void);

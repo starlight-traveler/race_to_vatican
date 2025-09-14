@@ -30,9 +30,14 @@ typedef struct
     bool announced_win; // to send win once
 } LevelScene;
 
-static bool within_window(float freq, float target, float tol)
+static bool within_window(float freq)
 {
-    return fabsf(freq - target) <= tol;
+    for (int i = 0; i < TONE_COUNT; i++) {
+        if (fabsf(freq - tone_table[i]) <= TONE_TOLERANCE) {
+            return true;
+        }
+    }
+    return false;
 }
 
 static float compute_progress(uint64_t now_ms, uint64_t hold_start_ms, uint32_t needed_ms, bool in_window)
@@ -106,7 +111,7 @@ static void level_update(Scene *s, float freq, float peak, uint64_t now_ms)
     if (freq > 0.0f)
         ui_move_player_bins(&ls->pl, freq);
 
-    if (freq > 0.0f && within_window(freq, lv->target_hz, lv->tolerance_hz))
+    if (freq > 0.0f && within_window(freq))
     {
         if (!ls->in_window)
         {

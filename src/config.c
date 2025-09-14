@@ -1,6 +1,9 @@
 #include "config.h"
 #include <time.h>
 
+// table for different expected tones
+const float tone_table[TONE_COUNT] = {100.0f, 200.0f, 300.0f};
+
 const Level g_levels[SCENE_COUNT] = {
     // SCENE_MENU (dummy slot)
     {
@@ -11,7 +14,7 @@ const Level g_levels[SCENE_COUNT] = {
         .hold_ms = 0,
         .time_limit_ms = 0,
         .next_scene_id = SCENE_MENU},
-
+        
     // SCENE_LEVEL_BLUEBOX
     {
         .name = "Blue Box: Vatican Trunk",
