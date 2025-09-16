@@ -167,6 +167,15 @@ int main(int argc, char **argv)
                 case SCENE_HOME:
                     next = create_level_scene(SCENE_HOME);
                     break;
+                case SCENE_MOM:
+                    next = create_level_scene(SCENE_MOM);
+                    break;
+                case SCENE_NEBRASKA_FARM:
+                    next = create_level_scene(SCENE_NEBRASKA_FARM);
+                    break;
+                case SCENE_BEAN:
+                    next = create_level_scene(SCENE_BEAN);
+                    break;
                 case SCENE_LEVEL_BLUEBOX:
                     next = create_level_scene(SCENE_LEVEL_BLUEBOX);
                     break;

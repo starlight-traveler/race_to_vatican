@@ -15,7 +15,7 @@ const Level g_levels[SCENE_COUNT] = {
         .time_limit_ms = 0,
         .next_scene_id = {SCENE_MENU,0,0}},
 
-    // start scene: home
+    // SCENE_HOME
     {
         .name = "Home: St. Louis, Missouri",
         .blurb =
@@ -29,7 +29,59 @@ const Level g_levels[SCENE_COUNT] = {
         .tolerance_hz = 15.0f,
         .hold_ms = 1500,
         .time_limit_ms = 0,
-        .next_scene_id = {SCENE_LEVEL_PRACTICE_440, 0, SCENE_LEVEL_BLUEBOX}},
+        .next_scene_id = {SCENE_MOM, SCENE_NEBRASKA_FARM, SCENE_BEAN}},
+
+    // SCENE_MOM
+    {
+        .name = "Your Friend's Mom: Somewhere in St. Louis",
+        .blurb =
+            "A suburban home, nestled in somewhere in St.Louis County:\n"
+            "\"Hello?\"\n"
+            "You realize the voice sounds like Mrs. ######\n"
+            "\"uhhhhh, Mrs. ######?\"\n"
+            "\"Yes this is she. Wait ..., is this #####\"\n"
+            "\"Yea sorry I just got your number from ##### and was wondering if I could talk to him\"\n"
+            "\"Aren't you guys together right now? Why would you even call?\"\n"
+            "You do not want her to find out about the blue boxes, jump to another line",
+        .target_hz = 440.0f,
+        .tolerance_hz = 15.0f,
+        .hold_ms = 1500,
+        .time_limit_ms = 0,
+        .next_scene_id = {SCENE_HOME, 0, SCENE_LEVEL_BLUEBOX}},
+
+    // SCENE_NEBRASKA_FARM
+    {
+        .name = "Some random farm in Nebraska",
+        .blurb =
+            "A cow farm in Nebraska:"
+            "You hear the sound of cows mooing\n"
+            "Farmer : Do you need some milk\n"
+            "You: You do not sound like the Pope\n"
+            "Farmer: Why would I sound like the Pope\n"
+            "You: Nevermind, What kind of milk do you have?\n"
+            "After being distracted by milk, you decide to move on\n",
+        .target_hz = 440.0f,
+        .tolerance_hz = 15.0f,
+        .hold_ms = 1500,
+        .time_limit_ms = 0,
+        .next_scene_id = {0, SCENE_HOME, 0}},
+
+    // SCENE_CHICAGO
+
+    {
+        .name = "Chicago City",
+        .blurb = 
+            "Near Cloud Gate (the chicago bean)\n"
+            "Random Passerby: Look, I can see my reflection in the bean!\n"
+            "It seems you called a telephone box in Chicago\n"
+            "You: This might take longer than I thought\n"
+            "Keep calling\n",
+        .target_hz = 440.0f,
+        .tolerance_hz = 15.0f,
+        .hold_ms = 1500,
+        .time_limit_ms = 0,
+        .next_scene_id = {0, 0, SCENE_HOME}},
+
 
     // SCENE_LEVEL_BLUEBOX
     {
