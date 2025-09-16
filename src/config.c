@@ -47,7 +47,7 @@ const Level g_levels[SCENE_COUNT] = {
         .tolerance_hz = 15.0f,
         .hold_ms = 1500,
         .time_limit_ms = 0,
-        .next_scene_id = {SCENE_HOME, 0, SCENE_LEVEL_BLUEBOX}},
+        .next_scene_id = {SCENE_HOME,SCENE_BEAN,SCENE_NEBRASKA_FARM}},
 
     // SCENE_NEBRASKA_FARM
     {
@@ -55,7 +55,7 @@ const Level g_levels[SCENE_COUNT] = {
         .blurb =
             "A cow farm in Nebraska:"
             "You hear the sound of cows mooing\n"
-            "Farmer : Do you need some milk\n"
+            "Farmer: Do you need some milk?\n"
             "You: You do not sound like the Pope\n"
             "Farmer: Why would I sound like the Pope\n"
             "You: Nevermind, What kind of milk do you have?\n"
@@ -64,7 +64,7 @@ const Level g_levels[SCENE_COUNT] = {
         .tolerance_hz = 15.0f,
         .hold_ms = 1500,
         .time_limit_ms = 0,
-        .next_scene_id = {0, SCENE_HOME, 0}},
+        .next_scene_id = {SCENE_YELLOWSTONE, SCENE_HOME, SCENE_MOM}},
 
     // SCENE_CHICAGO
 
@@ -80,8 +80,55 @@ const Level g_levels[SCENE_COUNT] = {
         .tolerance_hz = 15.0f,
         .hold_ms = 1500,
         .time_limit_ms = 0,
-        .next_scene_id = {0, 0, SCENE_HOME}},
+        .next_scene_id = {SCENE_NOTRE_DAME, SCENE_MOM, SCENE_HOME}},
 
+    // SCENE_YELLOWSTONE
+    {
+        .name = "Yellowstone National Park",
+        .blurb =
+            "Steam rises over hot springs, geysers erupt, the landscape is covered by a lush forest:\n"
+            "Tour Guide: Thanks for calling Yellowstone National Park. How can I help you today?"
+            "You: Would you happen to know the Vatican's number?\n"
+            "Tour Guide: I think you have the wrong number\n"
+            "You notice you are continuing to travel west, maybe you will be able to cross the Pacific soon\n",
+        .target_hz = 440.0f,
+        .tolerance_hz = 15.0f,
+        .hold_ms = 1500,
+        .time_limit_ms = 0,
+        .next_scene_id = {SCENE_HOME,0,SCENE_NEBRASKA_FARM}},
+    // SCENE_NOTRE_DAME
+    {
+        .name = "Notre Dame Stadium",
+        .blurb =
+            "Disappointed students leave the stands, it seems they just lost in heartbreaking game in the fourth quarter\n"
+            "Student: Well, looks like our season is over?\n"
+            "It seems you intercepted someone trying to call their friend\n"
+            "You: What season?\n"
+            "Student: Don't act stupid, our entire senior football season is ruined! What happend to our defense from last season?\n"
+            "You: Chill out man, its just football\n"
+            "The student hangs up on the line\n",
+        .target_hz = 440.0f,
+        .tolerance_hz = 15.0f,
+        .hold_ms = 1500,
+        .time_limit_ms = 0,
+        .next_scene_id = {0,SCENE_BEAN,0}},
+
+     // SCENE_ALASKA
+    {
+        .name = "ALASKA",
+        .blurb =
+            "\n"
+            "Student: Well, looks like our season is over?\n"
+            "It seems you intercepted someone trying to call their friend\n"
+            "You: What season?\n"
+            "Student: Don't act stupid, our entire senior football season is ruined! What happend to our defense from last season?\n"
+            "You: Chill out man, its just football\n"
+            "The student hangs up on the line\n",
+        .target_hz = 440.0f,
+        .tolerance_hz = 15.0f,
+        .hold_ms = 1500,
+        .time_limit_ms = 0,
+        .next_scene_id = {0,SCENE_BEAN,0}},
 
     // SCENE_LEVEL_BLUEBOX
     {
