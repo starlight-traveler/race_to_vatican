@@ -1,0 +1,7 @@
+/Users/rpaillet/local/class/hackers/race_to_vatican/build/CMakeFiles/mic_term_game.dir
+/Users/rpaillet/local/class/hackers/race_to_vatican/build/CMakeFiles/edit_cache.dir
+/Users/rpaillet/local/class/hackers/race_to_vatican/build/CMakeFiles/rebuild_cache.dir
+/Users/rpaillet/local/class/hackers/race_to_vatican/build/CMakeFiles/list_install_components.dir
+/Users/rpaillet/local/class/hackers/race_to_vatican/build/CMakeFiles/install.dir
+/Users/rpaillet/local/class/hackers/race_to_vatican/build/CMakeFiles/install/local.dir
+/Users/rpaillet/local/class/hackers/race_to_vatican/build/CMakeFiles/install/strip.dir
