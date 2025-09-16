@@ -42,6 +42,7 @@ typedef struct {
 enum
 {
     SCENE_MENU = 0,
+    SCENE_HOME,
     SCENE_LEVEL_BLUEBOX,
     SCENE_LEVEL_PRACTICE_440,
     SCENE_LEVEL_PENTAGON,

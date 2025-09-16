@@ -15,6 +15,22 @@ const Level g_levels[SCENE_COUNT] = {
         .time_limit_ms = 0,
         .next_scene_id = {SCENE_MENU,0,0}},
 
+    // start scene: home
+    {
+        .name = "Home: St. Louis, Missouri",
+        .blurb =
+            "It's a warm, windy summer day in St. Louis, Missouri.\n"
+            "You and a friend just got blue boxes from the phone phreaking hacker across the street.\n"
+            "You were told you could call anywhere in the world if you could figure out the right tones.\n"
+            "Your friend asks,\"Wouldn't it be funny if we somehow called the Pope?\"\n"
+            "\"Thats not a bad idea, wait ..., lets race to see who can get there first!\"\n"
+            "The Race to the Vatican Begins!\n",
+        .target_hz = 440.0f,
+        .tolerance_hz = 15.0f,
+        .hold_ms = 1500,
+        .time_limit_ms = 0,
+        .next_scene_id = {SCENE_LEVEL_PRACTICE_440, 0, SCENE_LEVEL_BLUEBOX}},
+
     // SCENE_LEVEL_BLUEBOX
     {
         .name = "Blue Box: Vatican Trunk",

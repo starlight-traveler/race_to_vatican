@@ -385,7 +385,7 @@ static bool menu_init(Scene *s)
 static void menu_handle(Scene *s, int ch)
 {
     MenuScene *ms = (MenuScene *)s;
-    const int N = 3;
+    const int N = 4;
     if (ch == KEY_UP)
     {
         ms->highlight = (ms->highlight + N - 1) % N;
@@ -397,10 +397,12 @@ static void menu_handle(Scene *s, int ch)
     else if (ch == '\n' || ch == KEY_ENTER)
     {
         if (ms->highlight == 0)
-            s->next_scene = SCENE_LEVEL_PRACTICE_440;
+            s->next_scene = SCENE_HOME;
         else if (ms->highlight == 1)
-            s->next_scene = SCENE_LEVEL_BLUEBOX;
+            s->next_scene = SCENE_LEVEL_PRACTICE_440;
         else if (ms->highlight == 2)
+            s->next_scene = SCENE_LEVEL_BLUEBOX;
+        else if (ms->highlight == 3)
             s->next_scene = SCENE_VICTORY;
     }
 }
@@ -482,6 +484,7 @@ static void menu_render(Scene *s)
 
     /* Menu items */
     const char *items[] = {
+        "Begin Race",
         "Practice: Match 440 Hz (race-enabled)",
         "Level: Blue Box (2600 Hz seize) (race-enabled)",
         "Victory (demo)"};

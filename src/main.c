@@ -164,6 +164,9 @@ int main(int argc, char **argv)
                 case SCENE_MENU:
                     next = create_menu_scene();
                     break;
+                case SCENE_HOME:
+                    next = create_level_scene(SCENE_HOME);
+                    break;
                 case SCENE_LEVEL_BLUEBOX:
                     next = create_level_scene(SCENE_LEVEL_BLUEBOX);
                     break;
