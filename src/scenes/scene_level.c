@@ -108,12 +108,12 @@ static void level_update(Scene *s, float freq, float peak, uint64_t now_ms)
     ls->last_freq = freq;
     ls->last_peak = peak;
 
-    if (freq > 0.0f)
+    if (freq > 1200.0f)
         ui_move_player_bins(&ls->pl, freq);
 
     next_id = within_window(freq);
 
-    if (freq > 0.0f && next_id != -1)
+    if (freq > 1200.0f && next_id != -1)
     {
         if (!ls->in_window)
         {
