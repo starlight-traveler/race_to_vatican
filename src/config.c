@@ -117,7 +117,11 @@ const Level g_levels[SCENE_COUNT] = {
     {
         .name = "ALASKA",
         .blurb =
-            "",
+            "It's a cold, dark day in Alaska\n"
+            "Random Guy: Why did you wake me up, its the middle of the night!\n"
+            "You: Well its the middle of the day in Missouri!\n"
+            "Random Guy: Oh... I have not seen the sun in weeks up here in Alaska\n"
+            "You: Sounds kind of like going to Notre Dame\n",
         .target_hz = 440.0f,
         .tolerance_hz = 15.0f,
         .hold_ms = 1500,
@@ -128,13 +132,12 @@ const Level g_levels[SCENE_COUNT] = {
     {
         .name = "Houston",
         .blurb =
-            "\n"
-            "Student: Well, looks like our season is over?\n"
-            "It seems you intercepted someone trying to call their friend\n"
-            "You: What season?\n"
-            "Student: Don't act stupid, our entire senior football season is ruined! What happend to our defense from last season?\n"
-            "You: Chill out man, its just football\n"
-            "The student hangs up on the line\n",
+            "The NASA Mission Control Center in Houston is active, supporting a mission to the ISS\n"
+            "Astronaut: Houston, we have a problem\n"
+            "You: Not again!\n"
+            "Mission Control Operator: WHO ELSE IS ON THIS LINE\n"
+            "You should probably get off this line so NASA does not get mad\n",
+            
         .target_hz = 440.0f,
         .tolerance_hz = 15.0f,
         .hold_ms = 1500,
@@ -146,13 +149,17 @@ const Level g_levels[SCENE_COUNT] = {
     {
         .name = "Ohio",
         .blurb =
-            "\n"
-            "Student: Well, looks like our season is over?\n"
-            "It seems you intercepted someone trying to call their friend\n"
-            "You: What season?\n"
-            "Student: Don't act stupid, our entire senior football season is ruined! What happend to our defense from last season?\n"
-            "You: Chill out man, its just football\n"
-            "The student hangs up on the line\n",
+            "The phone rings at a house in the middle of Ohio"
+            "You: Where are you? I'm looking for the Vatican!\n"
+            "Ohio Resident: Huh, this is Ohio. Isn't that in like Europe somewhere?"
+            "You: Ohio? That must suck. Isn't that the worst state?\n"
+            "You: HAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHA\n"
+            "You: HAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHA\n"
+            "You: HAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHA\n"
+            "You: HAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHA\n"
+            "You: HAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHA\n"
+            "You: HAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHA\n"
+            "You: thats so funny please laugh\n",
         .target_hz = 440.0f,
         .tolerance_hz = 15.0f,
         .hold_ms = 1500,
@@ -164,13 +171,15 @@ const Level g_levels[SCENE_COUNT] = {
     {
         .name = "Boston, Massachusetts",
         .blurb =
-            "\n"
-            "Student: Well, looks like our season is over?\n"
-            "It seems you intercepted someone trying to call their friend\n"
-            "You: What season?\n"
-            "Student: Don't act stupid, our entire senior football season is ruined! What happend to our defense from last season?\n"
-            "You: Chill out man, its just football\n"
-            "The student hangs up on the line\n",
+            "In Boston Harbor, people prepare to have the second Boston Tea Party\n"
+            "Tea Activist: The ship just landed, get over here?\n"
+            "You: What ship? What is going on?\n"
+            "Tea Activist: Today's the day, were going to throw all of Bigelow's tea off their cargo ship\n"
+            "You: Why? Bigelow tea is pretty good\n"
+            "Tea Activist: So we don't have to pay taxes anymore!"
+            "You: Last time we did that it caused a revolutionary war\n"
+            "Tea Activist: Whatever it takes\n"
+            "Confused, you continue to look for the Vatican\n",
         .target_hz = 440.0f,
         .tolerance_hz = 15.0f,
         .hold_ms = 1500,
@@ -180,7 +189,7 @@ const Level g_levels[SCENE_COUNT] = {
     // SCENE_NEW_YORK
 
     {
-        .name = "The Statue of Libery: New York City",
+        .name = "New York City",
         .blurb =
             "\n"
             "Student: Well, looks like our season is over?\n"
@@ -255,13 +264,14 @@ const Level g_levels[SCENE_COUNT] = {
     {
         .name = "Poland",
         .blurb =
-            "\n"
-            "Student: Well, looks like our season is over?\n"
-            "It seems you intercepted someone trying to call their friend\n"
-            "You: What season?\n"
-            "Student: Don't act stupid, our entire senior football season is ruined! What happend to our defense from last season?\n"
-            "You: Chill out man, its just football\n"
-            "The student hangs up on the line\n",
+            "Student walk around The Pontifical University of John Paul II in Krakow, Poland\n"
+            "You: Hello, I am looking for the Pope\n"
+            "Professor: Szukasz papieża?\n"
+            "Professor: Czy Ty również jesteś fanem JPII\n?"
+            "You: JPII? yea was an awesome Pope! Finally someone who knows something\n"
+            "Professor: Jeśli szukasz Papieża, zadzwoń do Rzymu\n"
+            "You: I do not know what that means but thank you\n"
+            "He knows about the Pope, maybe you are getting closer\n",
         .target_hz = 440.0f,
         .tolerance_hz = 15.0f,
         .hold_ms = 1500,
@@ -360,7 +370,7 @@ const Level g_levels[SCENE_COUNT] = {
     // SCENE_JAPAN
 
     {
-        .name = "JAPAN",
+        .name = "Japan",
         .blurb =
             "\n"
             "Student: Well, looks like our season is over?\n"
