@@ -21,8 +21,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/mic_term_game.dir/src/scenes/scene_victory.c.o.d"
   "CMakeFiles/mic_term_game.dir/src/ui.c.o"
   "CMakeFiles/mic_term_game.dir/src/ui.c.o.d"
-  "mic_term_game"
-  "mic_term_game.pdb"
+  "race_to_vatican"
+  "race_to_vatican.pdb"
 )
 
 # Per-language clean rules from dependency scanning.
