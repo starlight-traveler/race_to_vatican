@@ -100,7 +100,7 @@ const Level g_levels[SCENE_COUNT] = {
     {
         .name = "Notre Dame Stadium",
         .blurb =
-            "Disappointed students leave the stands, it seems they just lost in heartbreaking game in the fourth quarter\n"
+            "Disappointed students leave the stands, it seems they just lost in heartbreaking game in the fourth quarter:\n"
             "Student: Well, looks like our season is over?\n"
             "It seems you intercepted someone trying to call their friend\n"
             "You: What season?\n"
@@ -117,7 +117,7 @@ const Level g_levels[SCENE_COUNT] = {
     {
         .name = "ALASKA",
         .blurb =
-            "It's a cold, dark day in Alaska\n"
+            "It's a cold, dark day in Alaska:\n"
             "Random Guy: Why did you wake me up, its the middle of the night!\n"
             "You: Well its the middle of the day in Missouri!\n"
             "Random Guy: Oh... I have not seen the sun in weeks up here in Alaska\n"
@@ -390,13 +390,15 @@ const Level g_levels[SCENE_COUNT] = {
     {
         .name = "Mexico",
         .blurb =
-            "\n"
-            "Student: Well, looks like our season is over?\n"
-            "It seems you intercepted someone trying to call their friend\n"
-            "You: What season?\n"
-            "Student: Don't act stupid, our entire senior football season is ruined! What happend to our defense from last season?\n"
-            "You: Chill out man, its just football\n"
-            "The student hangs up on the line\n",
+            "Pilgrims from all over the world gather at the Basilica of Our Lady of Guadalupe to see the Tilma\n"
+            "Office Attendant: Hola, esta es la Basílica de Guadalupe.\n"
+            "Congregation: Dios te salve, María, Llena eres de gracia, el Señor es contigo.\n"
+            "Congregation: Bendita tú eres entre todas las mujeres, y bendito es el fruto de tu vientre, Jesús.\n" 
+            "Congregation: Santa María, Madre de Dios, ruega por nosotros, pecadores, ahora y en la hora de nuestra muerte\n"
+            "Congregation: Amen\n"
+            "You: Oh I've been there before, what a beautiful church. Not very close to the Vatican though\n"
+            "You may have found a Catholic place, but you wonder how long will it take to get to the Vatican from Mexico?\n",
+
         .target_hz = 440.0f,
         .tolerance_hz = 15.0f,
         .hold_ms = 1500,
@@ -408,32 +410,31 @@ const Level g_levels[SCENE_COUNT] = {
     {
         .name = "Peru",
         .blurb =
-            "\n"
-            "Student: Well, looks like our season is over?\n"
-            "It seems you intercepted someone trying to call their friend\n"
-            "You: What season?\n"
-            "Student: Don't act stupid, our entire senior football season is ruined! What happend to our defense from last season?\n"
-            "You: Chill out man, its just football\n"
-            "The student hangs up on the line\n",
+            "The old city of Machu Picchu rests on the Andes mountains\n"
+            "Guide: Hola, ¿estás buscando visitar Machu Picchu?\n"
+            "You: Machu Picchu? isn't that in Peru? That's no where near the Vatican\n"
+            "Guide: ¿Tienes alguna pregunta sobre Machu Picchu?\n"
+            "You: Lo siento, no comprendo?\n"
+            "You realize it may be helpful to learn so new languages if you are going to use the blue box more often\n",
         .target_hz = 440.0f,
         .tolerance_hz = 15.0f,
         .hold_ms = 1500,
         .time_limit_ms = 0,
         .next_scene_id = {SCENE_RIO,SCENE_MEXICO,SCENE_EASTER_ISLAND}},
-
+ 
 
     // SCENE_RIO
 
     {
         .name = "Rio",
         .blurb =
-            "\n"
-            "Student: Well, looks like our season is over?\n"
-            "It seems you intercepted someone trying to call their friend\n"
-            "You: What season?\n"
-            "Student: Don't act stupid, our entire senior football season is ruined! What happend to our defense from last season?\n"
-            "You: Chill out man, its just football\n"
-            "The student hangs up on the line\n",
+            "Sunlight gleams off of the imposing figure of Christ the Redeemer, staring over Rio de Janeiro\n"
+            "Tour Guide: Você chegou ao posto de turismo do Cristo Redentor, quer comprar ingresso? \n"
+            "You: Hello, is this the Vatican?\n"
+            "Tour Guide: O Vaticano?, você terá que atravessar o oceano para isso?\n"
+            "You heard something about an ocean, maybe you can cross it from wherever you are\n",
+            
+           
         .target_hz = 440.0f,
         .tolerance_hz = 15.0f,
         .hold_ms = 1500,
@@ -462,9 +463,9 @@ const Level g_levels[SCENE_COUNT] = {
     // SCENE_AUSTRALIA
 
     {
-        .name = "Easter Island",
+        .name = "Australia",
         .blurb =
-            "\n"
+            "Random Australian Guy: "
             "Student: Well, looks like our season is over?\n"
             "It seems you intercepted someone trying to call their friend\n"
             "You: What season?\n"
@@ -554,6 +555,7 @@ const Level g_levels[SCENE_COUNT] = {
         .blurb =
             "The crowd roars at Shougang Park in Beijing, China. The China Smash Finals are in full swing\n"
             "Announcer: Ma Long's signature forehand blows by Lin Shidong to take the third game of the finals 11-5! What a match!?\n"
+            "Table Tennis Fun Fact: Ma long loses this event in real life as he was upset by the 19-year-old Lin Shidong at China Smash 2024)"
             "It seems you tapped into a line at the China Smash, a premier international table tennis event\n"
             "You: No way! I was hoping Hugo Calderano would make the finals this year.\n" 
             "As much as you love table tennis and want to keep listening to the match, your friend may be getting\n "
