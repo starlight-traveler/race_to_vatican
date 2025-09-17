@@ -117,13 +117,7 @@ const Level g_levels[SCENE_COUNT] = {
     {
         .name = "ALASKA",
         .blurb =
-            "\n"
-            "Student: Well, looks like our season is over?\n"
-            "It seems you intercepted someone trying to call their friend\n"
-            "You: What season?\n"
-            "Student: Don't act stupid, our entire senior football season is ruined! What happend to our defense from last season?\n"
-            "You: Chill out man, its just football\n"
-            "The student hangs up on the line\n",
+            "",
         .target_hz = 440.0f,
         .tolerance_hz = 15.0f,
         .hold_ms = 1500,
@@ -514,13 +508,11 @@ const Level g_levels[SCENE_COUNT] = {
     {
         .name = "Madagascar",
         .blurb =
-            "\n"
-            "Student: Well, looks like our season is over?\n"
-            "It seems you intercepted someone trying to call their friend\n"
-            "You: What season?\n"
-            "Student: Don't act stupid, our entire senior football season is ruined! What happend to our defense from last season?\n"
-            "You: Chill out man, its just football\n"
-            "The student hangs up on the line\n",
+            "An old man picks up the phone from Madagascar\n"
+            "Madagascar Resident: ka henoko hoe mitady vatican ianao?\n"
+            "Madagascar Resident: Raha mitondra an'io tsipika io mankany Ejipta ianao dia mety ho akaiky kokoa\n"
+            "You: You know something about the Vatican?\n"
+            "Maybe there is a clue here somewhere, if only you understood Malagasy\n",
         .target_hz = 440.0f,
         .tolerance_hz = 15.0f,
         .hold_ms = 1500,
@@ -532,13 +524,13 @@ const Level g_levels[SCENE_COUNT] = {
     {
         .name = "Egypt",
         .blurb =
-            "\n"
-            "Student: Well, looks like our season is over?\n"
-            "It seems you intercepted someone trying to call their friend\n"
-            "You: What season?\n"
-            "Student: Don't act stupid, our entire senior football season is ruined! What happend to our defense from last season?\n"
-            "You: Chill out man, its just football\n"
-            "The student hangs up on the line\n",
+            "Tourists wander around the Great Pyramids of Giza on hot day\n"
+            "Travel Consultant: Hello! Are you looking to travel to Giza to see the Pyramids?\n"
+            "You: No sorry I am actually trying to go to the Vatican\n"
+            "Travel Consultant: Oh, you will have to call someone else for that\n"
+            "Travel Consultant: Do you want me to connect you to someone else?\n"
+            "You: No thanks, I can't afford to wait\n",
+
         .target_hz = 440.0f,
         .tolerance_hz = 15.0f,
         .hold_ms = 1500,
@@ -550,13 +542,12 @@ const Level g_levels[SCENE_COUNT] = {
     {
         .name = "China",
         .blurb =
-            "\n"
-            "Student: Well, looks like our season is over?\n"
-            "It seems you intercepted someone trying to call their friend\n"
-            "You: What season?\n"
-            "Student: Don't act stupid, our entire senior football season is ruined! What happend to our defense from last season?\n"
-            "You: Chill out man, its just football\n"
-            "The student hangs up on the line\n",
+            "The crowd roars at Shougang Park in Beijing, China. The China Smash Finals are in full swing\n"
+            "Announcer: Ma Long's signature forehand blows by Lin Shidong to take the third game of the finals 11-5! What a match!?\n"
+            "It seems you tapped into a line at the China Smash, a premier international table tennis event\n"
+            "You: No way! I was hoping Hugo Calderano would make the finals this year.\n" 
+            "As much as you love table tennis and want to keep listening to the match, your friend may be getting\n "
+            "closer to the Vatican\n",
         .target_hz = 440.0f,
         .tolerance_hz = 15.0f,
         .hold_ms = 1500,
@@ -566,15 +557,15 @@ const Level g_levels[SCENE_COUNT] = {
     // SCENE_KOREA
 
     {
-        .name = "Easter Island",
+        .name = "South Korea",
         .blurb =
-            "\n"
-            "Student: Well, looks like our season is over?\n"
-            "It seems you intercepted someone trying to call their friend\n"
-            "You: What season?\n"
-            "Student: Don't act stupid, our entire senior football season is ruined! What happend to our defense from last season?\n"
-            "You: Chill out man, its just football\n"
-            "The student hangs up on the line\n",
+            "The City of Seoul is bustling on a beautiful Thursday afternoon, People are beginning to leave work for the day\n"
+            "IT Department: 또 전화야? 곧 떠나고 싶어\n"
+            "You: Sorry I do not understand\n"
+            "IT Department: 왜 미국인이 전화선에 서있나요?\n"
+            "IT Department: 장난전화가 아니길 바라. 집에 가야 해.\n"
+            "You: Any Idea where the Vatican is?\n"
+            "The attendant hangs up the phone, annoyed, but happy they can finally get off work\n",
         .target_hz = 440.0f,
         .tolerance_hz = 15.0f,
         .hold_ms = 1500,
@@ -584,15 +575,18 @@ const Level g_levels[SCENE_COUNT] = {
      // SCENE_SIBERIA
 
     {
-        .name = "Easter Island",
+        .name = "Siberia",
         .blurb =
-            "\n"
-            "Student: Well, looks like our season is over?\n"
-            "It seems you intercepted someone trying to call their friend\n"
-            "You: What season?\n"
-            "Student: Don't act stupid, our entire senior football season is ruined! What happend to our defense from last season?\n"
-            "You: Chill out man, its just football\n"
-            "The student hangs up on the line\n",
+            "The sun shines over the cold, windswept plains of West Siberia\n"
+            "You: Hello?\n"
+            "Mysterious Siberian Guy: What brings you here traveller? Nobody every calls anymore.\n"
+            "You: Where are you?\n"
+            "Mysterious Siberian Guy: Somewhere in the plains.\n"
+            "You: I'm looking for the Vatican\n"
+            "Mysterious Siberian Guy: Ah, I think the Poles might know something about that.\n"
+            "Mysterious Siberian Guy: Sorry to say this line only goes to back to the parts of Russia where people actually live\n"
+            "You: Well, thanks for the tip. Goodluck out there\n"
+            "Weird guy, but maybe getting to Poland will get you close to the Vatican\n",
         .target_hz = 440.0f,
         .tolerance_hz = 15.0f,
         .hold_ms = 1500,
