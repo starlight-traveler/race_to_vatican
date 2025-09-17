@@ -176,6 +176,93 @@ int main(int argc, char **argv)
                 case SCENE_BEAN:
                     next = create_level_scene(SCENE_BEAN);
                     break;
+                case SCENE_YELLOWSTONE:
+                    next = create_level_scene(SCENE_YELLOWSTONE);
+                    break;
+                case SCENE_NOTRE_DAME:
+                    next = create_level_scene(SCENE_NOTRE_DAME);
+                    break;
+                case SCENE_ALASKA:
+                    next = create_level_scene(SCENE_ALASKA);
+                    break;
+                case SCENE_HOUSTON:
+                    next = create_level_scene(SCENE_HOUSTON);
+                    break;
+                case SCENE_OHIO:
+                    next = create_level_scene(SCENE_OHIO);
+                    break;
+                case SCENE_BOSTON:
+                    next = create_level_scene(SCENE_BOSTON);
+                    break;
+                case SCENE_NEW_YORK:
+                    next = create_level_scene(SCENE_NEW_YORK);
+                    break;
+                case SCENE_LONDON:
+                    next = create_level_scene(SCENE_LONDON);
+                    break;
+                case SCENE_PORTUGAL:
+                    next = create_level_scene(SCENE_PORTUGAL);
+                    break;
+                case SCENE_PARIS:
+                    next = create_level_scene(SCENE_PARIS);
+                    break;
+                case SCENE_POLAND:
+                    next = create_level_scene(SCENE_POLAND);
+                    break;
+                case SCENE_ROME:
+                    next = create_level_scene(SCENE_ROME);
+                    break;
+                case SCENE_SAHARA:
+                    next = create_level_scene(SCENE_SAHARA);
+                    break;
+                case SCENE_VATICAN:
+                    next = create_level_scene(SCENE_VATICAN);
+                    break;
+                case SCENE_FLORIDA:
+                    next = create_level_scene(SCENE_FLORIDA);
+                    break;
+                case SCENE_RUSSIA:
+                    next = create_level_scene(SCENE_RUSSIA);
+                    break;
+                case SCENE_JAPAN:
+                    next = create_level_scene(SCENE_JAPAN);
+                    break;
+                case SCENE_MEXICO:
+                    next = create_level_scene(SCENE_MEXICO);
+                    break;
+                case SCENE_PERU:
+                    next = create_level_scene(SCENE_PERU);
+                    break;
+                case SCENE_RIO:
+                    next = create_level_scene(SCENE_RIO);
+                    break;
+                case SCENE_EASTER_ISLAND:
+                    next = create_level_scene(SCENE_EASTER_ISLAND);
+                    break;
+                case SCENE_AUSTRALIA:
+                    next = create_level_scene(SCENE_AUSTRALIA);
+                    break;
+                case SCENE_SOUTH_AFRICA:
+                    next = create_level_scene(SCENE_SOUTH_AFRICA);
+                    break;
+                case SCENE_INDIA:
+                    next = create_level_scene(SCENE_INDIA);
+                    break;
+                case SCENE_MADAGASCAR:
+                    next = create_level_scene(SCENE_MADAGASCAR);
+                    break;
+                case SCENE_EGYPT:
+                    next = create_level_scene(SCENE_EGYPT);
+                    break;
+                case SCENE_CHINA:
+                    next = create_level_scene(SCENE_CHINA);
+                    break;
+                case SCENE_KOREA:
+                    next = create_level_scene(SCENE_KOREA);
+                    break;
+                case SCENE_SIBERIA:
+                    next = create_level_scene(SCENE_SIBERIA);
+                    break;
                 case SCENE_LEVEL_BLUEBOX:
                     next = create_level_scene(SCENE_LEVEL_BLUEBOX);
                     break;
