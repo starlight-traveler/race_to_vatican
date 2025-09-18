@@ -3,7 +3,7 @@
 #include <string.h>
 #include <math.h>
 #include <time.h>
-#include <curses.h>
+#include <ncursesw/ncurses.h>
 #include "scene_manager.h"
 #include "ui.h"
 #include "config.h"
@@ -399,7 +399,7 @@ static void menu_handle(Scene *s, int ch)
         if (ms->highlight == 0)
             s->next_scene = SCENE_HOME;
         else if (ms->highlight == 1)
-            s->next_scene = SCENE_HELP;
+            s->next_scene = SCENE_RUSSIA;
         else if (ms->highlight == 2)
             s->next_scene = SCENE_LEVEL_PRACTICE_440;
         else if (ms->highlight == 3)

@@ -2,7 +2,8 @@
 #include <stdbool.h>
 #include <string.h>
 #include <stdlib.h>
-#include <curses.h>
+#include <locale.h>
+#include <ncursesw/ncurses.h>
 #include "config.h"
 #include "audio.h"
 #include "dsp.h"
@@ -245,8 +246,8 @@ int main(int argc, char **argv)
                 case SCENE_AUSTRALIA:
                     next = create_level_scene(SCENE_AUSTRALIA);
                     break;
-                case SCENE_SOUTH_AFRICA:
-                    next = create_level_scene(SCENE_SOUTH_AFRICA);
+                case SCENE_KENYA:
+                    next = create_level_scene(SCENE_KENYA);
                     break;
                 case SCENE_INDIA:
                     next = create_level_scene(SCENE_INDIA);

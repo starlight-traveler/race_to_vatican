@@ -1,5 +1,6 @@
 #include <stdlib.h>
-#include <curses.h>
+#include <locale.h>
+#include <ncursesw/ncurses.h>
 #include <math.h>
 #include <string.h>
 #include "scene_manager.h"
@@ -182,7 +183,9 @@ static void level_render(Scene *s)
             const char *nl = strchr(p, '\n');
             if (!nl)
             {
-                mvprintw(row++, 2, "%s", p);
+                wchar_t wbuf[256];
+                mbstowcs(wbuf, p, 255);
+                mvaddwstr(row++, 2, wbuf);
                 break;
             }
             char buf[256];
@@ -191,13 +194,17 @@ static void level_render(Scene *s)
                 len = sizeof(buf) - 1;
             memcpy(buf, p, len);
             buf[len] = 0;
-            mvprintw(row++, 2, "%s", buf);
+
+            wchar_t wbuf[256];
+            mbstowcs(wbuf, buf, 255);
+            mvaddwstr(row++, 2, wbuf);
+
             p = nl + 1;
         }
     }
 
-    mvprintw(row + 1, 2, "Target: %.1f Hz  ±%.1f Hz  | Hold: %u ms",
-             lv->target_hz, lv->tolerance_hz, lv->hold_ms);
+    // mvprintw(row + 1, 2, "Target: %.1f Hz  ±%.1f Hz  | Hold: %u ms",
+    //        lv->target_hz, lv->tolerance_hz, lv->hold_ms);
 
     // Local progress bar
     int bar_y = row + 3;

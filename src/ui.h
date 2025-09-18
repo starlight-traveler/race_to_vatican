@@ -1,7 +1,7 @@
 #ifndef UI_H
 #define UI_H
 
-#include <curses.h>
+#include <ncursesw/ncurses.h>
 #include "config.h"
 
 // UI helpers
