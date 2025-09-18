@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.16)
 
-project(mic_term_game C)
+project(race_to_vatican C)
 
 # Build options
 set(CMAKE_C_STANDARD 11)
@@ -28,6 +28,7 @@ set(SRC_FILES
   src/scenes/scene_level.c
   src/scenes/scene_victory.c
   src/scenes/scene_defeat.c    # <-- add
+  src/scenes/scene_help.c
 )
 
 
@@ -107,7 +108,7 @@ endif()
 
 # Output name
 set_target_properties(${PROJECT_NAME} PROPERTIES
-  OUTPUT_NAME "mic_term_game"
+  OUTPUT_NAME "race_to_vatican"
 )
 
 # Install rule (optional)

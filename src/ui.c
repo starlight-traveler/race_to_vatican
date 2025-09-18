@@ -23,10 +23,10 @@ void ui_draw_border(void)
 
 void ui_header_pitch(float freq, float peak)
 {
-    mvprintw(0, 2, " mic_term_game ");
+    mvprintw(0, 2, " RACE TO VATICAN ");
     if (freq > 0.0f)
     {
-        mvprintw(0, 18, "| freq: %7.1f Hz  peak: %.2f  (WASD/Arrows: move, 'q': quit)", freq, peak);
+        mvprintw(0, 18, " | freq: %7.1f Hz  peak: %.2f  (WASD/Arrows: move, 'q': quit)", freq, peak);
     }
     else
     {
