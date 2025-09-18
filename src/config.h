@@ -25,7 +25,7 @@
 // Tone Count and Tolerance
 
 #define TONE_COUNT         3
-#define TONE_TOLERANCE     20.0f
+#define TONE_TOLERANCE     30.0f
 
 
 typedef struct {
