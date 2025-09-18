@@ -17,18 +17,18 @@ typedef struct
 /*------------------------------------------------------------------------
     Tunables for voice rejection & band selection
   ------------------------------------------------------------------------*/
-#define TELEMETRY_BAND_LO_HZ 1100.0f
-#define TELEMETRY_BAND_HI_HZ 1800.0f
+#define TELEMETRY_BAND_LO_HZ 300.0f
+#define TELEMETRY_BAND_HI_HZ 2400.0f
 
 /* Pre/post guard to make the transition a bit steeper than the hard band */
-#define HPF_EDGE_HZ 1000.0f /* high-pass edge a bit below band */
-#define LPF_EDGE_HZ 1900.0f /* low-pass edge a bit above band  */
+#define HPF_EDGE_HZ 150.0f /* high-pass edge a bit below band */
+#define LPF_EDGE_HZ 2500.0f /* low-pass edge a bit above band  */
 
 /* Butterworth-like Q for 2nd-order HP/LP sections (~-3 dB at cutoff) */
 #define BIQUAD_Q_BUTTER 0.70710678f
 
 /* In-band dominance requirement (fraction of total frame energy in band) */
-#define INBAND_ENERGY_MIN_FRAC 0.20f
+#define INBAND_ENERGY_MIN_FRAC 0.15f
 
 /* Quality thresholds for autocorrelation peak */
 #ifndef PEAK_NORM_THRESH
