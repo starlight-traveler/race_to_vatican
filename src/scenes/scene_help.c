@@ -52,12 +52,23 @@ static void help_render(Scene *s)
     mvprintw(y++, x + 2, "- Hold the device close to the comptuer's microphone, you need to find where that is.");
     y++;
 
+    mvprintw(y++, x, "Tones:");
+    mvprintw(y++, x + 2, "- The game logic supports 3 different tones: 1400Hz, 1600Hz, and 1800Hz.");
+    mvprintw(y++, x + 2, "- At the top of each level, there is a frequency tracker to check what frequency you are at.");
+    mvprintw(y++, x + 2, "- At each level, each of the tones will lead to a different scene (most of the time).");
+    mvprintw(y++, x + 2, "- Each tone between scenes is a two way path, so using the same tone again immediately will take you back to the previous scene.");
+    mvprintw(y++, x + 2, "- So, with 3 tones, each scene will generally have 2 new options to explore, and a way to go back");
+    mvprintw(y++, x + 2, "- ");
+    y++;
+
+
+
     mvprintw(y++, x, "Levels:");
     mvprintw(y++, x + 2, "- Practice 440 Hz: A4 Steadily.");
     y++;
 
     mvprintw(y++, x, "Tips:");
-    mvprintw(y++, x + 2, "- A clear, stable tone works best. The DSP logic cuts off voice, but will cause jitter.");
+    mvprintw(y++, x + 2, "- A clear, stable tone works best. The DSP logic attemps to cut off voice, but will cause jitter.");
     mvprintw(y++, x + 2, "- If input seems dead, check your OS mic permissions and input device. It should asked on startup.");
     y++;
 
