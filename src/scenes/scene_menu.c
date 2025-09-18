@@ -399,7 +399,7 @@ static void menu_handle(Scene *s, int ch)
         if (ms->highlight == 0)
             s->next_scene = SCENE_HOME;
         else if (ms->highlight == 1)
-            s->next_scene = SCENE_RUSSIA;
+            s->next_scene = SCENE_HELP;
         else if (ms->highlight == 2)
             s->next_scene = SCENE_LEVEL_PRACTICE_440;
         else if (ms->highlight == 3)
