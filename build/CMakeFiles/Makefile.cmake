@@ -57,5 +57,5 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/mic_term_game.dir/DependInfo.cmake"
+  "CMakeFiles/race_to_vatican.dir/DependInfo.cmake"
   )
