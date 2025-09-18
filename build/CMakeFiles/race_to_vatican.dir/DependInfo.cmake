@@ -15,6 +15,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/Users/rpaillet/local/class/hackers/race_to_vatican/src/net.c" "CMakeFiles/race_to_vatican.dir/src/net.c.o" "gcc" "CMakeFiles/race_to_vatican.dir/src/net.c.o.d"
   "/Users/rpaillet/local/class/hackers/race_to_vatican/src/scene_manager.c" "CMakeFiles/race_to_vatican.dir/src/scene_manager.c.o" "gcc" "CMakeFiles/race_to_vatican.dir/src/scene_manager.c.o.d"
   "/Users/rpaillet/local/class/hackers/race_to_vatican/src/scenes/scene_defeat.c" "CMakeFiles/race_to_vatican.dir/src/scenes/scene_defeat.c.o" "gcc" "CMakeFiles/race_to_vatican.dir/src/scenes/scene_defeat.c.o.d"
+  "/Users/rpaillet/local/class/hackers/race_to_vatican/src/scenes/scene_help.c" "CMakeFiles/race_to_vatican.dir/src/scenes/scene_help.c.o" "gcc" "CMakeFiles/race_to_vatican.dir/src/scenes/scene_help.c.o.d"
   "/Users/rpaillet/local/class/hackers/race_to_vatican/src/scenes/scene_level.c" "CMakeFiles/race_to_vatican.dir/src/scenes/scene_level.c.o" "gcc" "CMakeFiles/race_to_vatican.dir/src/scenes/scene_level.c.o.d"
   "/Users/rpaillet/local/class/hackers/race_to_vatican/src/scenes/scene_menu.c" "CMakeFiles/race_to_vatican.dir/src/scenes/scene_menu.c.o" "gcc" "CMakeFiles/race_to_vatican.dir/src/scenes/scene_menu.c.o.d"
   "/Users/rpaillet/local/class/hackers/race_to_vatican/src/scenes/scene_victory.c" "CMakeFiles/race_to_vatican.dir/src/scenes/scene_victory.c.o" "gcc" "CMakeFiles/race_to_vatican.dir/src/scenes/scene_victory.c.o.d"

@@ -13,6 +13,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/race_to_vatican.dir/src/scene_manager.c.o.d"
   "CMakeFiles/race_to_vatican.dir/src/scenes/scene_defeat.c.o"
   "CMakeFiles/race_to_vatican.dir/src/scenes/scene_defeat.c.o.d"
+  "CMakeFiles/race_to_vatican.dir/src/scenes/scene_help.c.o"
+  "CMakeFiles/race_to_vatican.dir/src/scenes/scene_help.c.o.d"
   "CMakeFiles/race_to_vatican.dir/src/scenes/scene_level.c.o"
   "CMakeFiles/race_to_vatican.dir/src/scenes/scene_level.c.o.d"
   "CMakeFiles/race_to_vatican.dir/src/scenes/scene_menu.c.o"

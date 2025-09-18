@@ -342,6 +342,30 @@ src/scenes/scene_defeat.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/race_to_vatican.dir/build.make CMakeFiles/race_to_vatican.dir/src/scenes/scene_defeat.c.s
 .PHONY : src/scenes/scene_defeat.c.s
 
+src/scenes/scene_help.o: src/scenes/scene_help.c.o
+.PHONY : src/scenes/scene_help.o
+
+# target to build an object file
+src/scenes/scene_help.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/race_to_vatican.dir/build.make CMakeFiles/race_to_vatican.dir/src/scenes/scene_help.c.o
+.PHONY : src/scenes/scene_help.c.o
+
+src/scenes/scene_help.i: src/scenes/scene_help.c.i
+.PHONY : src/scenes/scene_help.i
+
+# target to preprocess a source file
+src/scenes/scene_help.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/race_to_vatican.dir/build.make CMakeFiles/race_to_vatican.dir/src/scenes/scene_help.c.i
+.PHONY : src/scenes/scene_help.c.i
+
+src/scenes/scene_help.s: src/scenes/scene_help.c.s
+.PHONY : src/scenes/scene_help.s
+
+# target to generate assembly for a file
+src/scenes/scene_help.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/race_to_vatican.dir/build.make CMakeFiles/race_to_vatican.dir/src/scenes/scene_help.c.s
+.PHONY : src/scenes/scene_help.c.s
+
 src/scenes/scene_level.o: src/scenes/scene_level.c.o
 .PHONY : src/scenes/scene_level.o
 
@@ -472,6 +496,9 @@ help:
 	@echo "... src/scenes/scene_defeat.o"
 	@echo "... src/scenes/scene_defeat.i"
 	@echo "... src/scenes/scene_defeat.s"
+	@echo "... src/scenes/scene_help.o"
+	@echo "... src/scenes/scene_help.i"
+	@echo "... src/scenes/scene_help.s"
 	@echo "... src/scenes/scene_level.o"
 	@echo "... src/scenes/scene_level.i"
 	@echo "... src/scenes/scene_level.s"
