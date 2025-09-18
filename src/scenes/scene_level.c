@@ -133,7 +133,13 @@ static void level_update(Scene *s, float freq, float peak, uint64_t now_ms)
     net_poll(&g_net, &g_peer, now_ms);
     NetStatus status = NET_STATUS_PLAYING;
     
-    if (s->next_scene == SCENE_VATICAN) {
+    
+    
+    // If we completed locally, announce WIN and transition
+    if (ls->progress01 >= 1.0f)
+    {
+        s->next_scene = lv->next_scene_id[next_id];
+        if (s->next_scene == SCENE_VATICAN) {
 
         status = NET_STATUS_WIN;
 
@@ -141,22 +147,9 @@ static void level_update(Scene *s, float freq, float peak, uint64_t now_ms)
             net_send_state(&g_net, freq, ls->progress01, status, now_ms);
             ls->announced_win = true;
         }
-        s->next_scene = lv->next_scene_id[next_id];
+        }
         return;
     }
-    
-    // If we completed locally, announce WIN and transition
-    // if (ls->progress01 >= 1.0f)
-    // {
-    //     status = NET_STATUS_WIN;
-    //     if (!ls->announced_win)
-    //     {
-    //         net_send_state(&g_net, freq, ls->progress01, status, now_ms);
-    //         ls->announced_win = true;
-    //     }
-    //     s->next_scene = lv->next_scene_id[next_id];
-    //     return;
-    // }
 
     // If peer already won, we lose
     if (g_peer.seen && g_peer.last_status == NET_STATUS_WIN)
