@@ -28,4 +28,4 @@ This uses UDP to transit the data over the network, it is suggested to use ND-gu
 
 The libraries or external dependencies used are, the CMAKE is portable to MacOS, Linux, and Windows without the need for special permissions:
 
-ncurses, portaudio, math, threads, at least C11
+ncursesw, portaudio, math, threads, at least C11
