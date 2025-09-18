@@ -399,11 +399,14 @@ static void menu_handle(Scene *s, int ch)
         if (ms->highlight == 0)
             s->next_scene = SCENE_HOME;
         else if (ms->highlight == 1)
-            s->next_scene = SCENE_LEVEL_PRACTICE_440;
+            s->next_scene = SCENE_HELP;
         else if (ms->highlight == 2)
-            s->next_scene = SCENE_LEVEL_BLUEBOX;
+            s->next_scene = SCENE_LEVEL_PRACTICE_440;
         else if (ms->highlight == 3)
+            s->next_scene = SCENE_LEVEL_BLUEBOX;
+        else if (ms->highlight == 4)
             s->next_scene = SCENE_VICTORY;
+
     }
 }
 
@@ -485,9 +488,9 @@ static void menu_render(Scene *s)
     /* Menu items */
     const char *items[] = {
         "Begin Race",
-        "Practice: Match 440 Hz (race-enabled)",
-        "Level: Blue Box (2600 Hz seize) (race-enabled)",
-        "Victory (demo)"};
+        "How To Play",
+        "Practice: Match Hz Dynamically",
+        "Debug/Settings"};
     const int item_count = (int)(sizeof(items) / sizeof(items[0]));
 
     /* Menu anchor below the art */
@@ -536,3 +539,4 @@ Scene *create_menu_scene(void)
     ms->wire_phase = 0.0f;
     return (Scene *)ms;
 }
+
