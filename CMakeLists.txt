@@ -23,14 +23,13 @@ set(SRC_FILES
   src/dsp.c
   src/ui.c
   src/scene_manager.c
-  src/net.c                    # <-- add
+  src/net.c
   src/scenes/scene_menu.c
   src/scenes/scene_level.c
   src/scenes/scene_victory.c
-  src/scenes/scene_defeat.c    # <-- add
+  src/scenes/scene_defeat.c
   src/scenes/scene_help.c
 )
-
 
 add_executable(${PROJECT_NAME} ${SRC_FILES})
 target_compile_definitions(${PROJECT_NAME} PRIVATE _POSIX_C_SOURCE=200809L)
@@ -52,20 +51,18 @@ if (NOT MSVC)
   endif()
 endif()
 
-# ncurses
-# Prefer the built-in FindCurses
-# find_package(Curses REQUIRED)
-# target_link_libraries(${PROJECT_NAME} PRIVATE ${CURSES_LIBRARIES})
-# target_include_directories(${PROJECT_NAME} PRIVATE ${CURSES_INCLUDE_DIR})
+# ncurses (require wide-character build)
+# Use CMake's FindCurses with wide-char requirement. This finds headers and libs portably.
+set(CURSES_NEED_WIDE TRUE)
+find_package(Curses REQUIRED)
 
-# ncursesw (wide character support)
-find_library(NCURSESW_LIB ncursesw REQUIRED)
+target_include_directories(${PROJECT_NAME} PRIVATE ${CURSES_INCLUDE_DIR})
+target_link_libraries(${PROJECT_NAME} PRIVATE ${CURSES_LIBRARIES})
+target_compile_definitions(${PROJECT_NAME} PRIVATE NCURSES_WIDECHAR=1)
 
-if (NOT NCURSESW_LIB)
-    message(FATAL_ERROR "ncursesw library not found — please install it (e.g., libncursesw5-dev or ncurses-devel).")
-endif()
-
-target_link_libraries(${PROJECT_NAME} PRIVATE ${NCURSESW_LIB})
+# Helpful status output
+message(STATUS "Curses include dir: ${CURSES_INCLUDE_DIR}")
+message(STATUS "Curses libraries : ${CURSES_LIBRARIES}")
 
 # PortAudio
 # Try pkg-config first, then fall back to a manual search.
@@ -100,7 +97,6 @@ endif()
 
 # On Apple, PortAudio may require CoreAudio frameworks during link if static
 if (APPLE)
-  # Only add if the library is static or CMake fails to pull frameworks via the dylib itself
   target_link_libraries(${PROJECT_NAME} PRIVATE
     "-framework CoreAudio"
     "-framework AudioToolbox"
