@@ -54,9 +54,18 @@ endif()
 
 # ncurses
 # Prefer the built-in FindCurses
-find_package(Curses REQUIRED)
-target_link_libraries(${PROJECT_NAME} PRIVATE ${CURSES_LIBRARIES})
-target_include_directories(${PROJECT_NAME} PRIVATE ${CURSES_INCLUDE_DIR})
+# find_package(Curses REQUIRED)
+# target_link_libraries(${PROJECT_NAME} PRIVATE ${CURSES_LIBRARIES})
+# target_include_directories(${PROJECT_NAME} PRIVATE ${CURSES_INCLUDE_DIR})
+
+# ncursesw (wide character support)
+find_library(NCURSESW_LIB ncursesw REQUIRED)
+
+if (NOT NCURSESW_LIB)
+    message(FATAL_ERROR "ncursesw library not found — please install it (e.g., libncursesw5-dev or ncurses-devel).")
+endif()
+
+target_link_libraries(${PROJECT_NAME} PRIVATE ${NCURSESW_LIB})
 
 # PortAudio
 # Try pkg-config first, then fall back to a manual search.
