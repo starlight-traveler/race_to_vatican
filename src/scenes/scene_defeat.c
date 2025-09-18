@@ -29,7 +29,7 @@ static void def_update(Scene *s, float f, float p, uint64_t now_ms)
     (void)f;
     (void)p;
     DefeatScene *d = (DefeatScene *)s;
-    if (now_ms - d->enter_ms >= 2000)
+    if (now_ms - d->enter_ms >= 10000)
         s->next_scene = SCENE_MENU;
 }
 
@@ -39,7 +39,7 @@ static void def_render(Scene *s)
     erase();
     ui_draw_border();
     mvprintw(2, 2, ">>> YOU LOSE <<<");
-    mvprintw(4, 2, "Peer won the race%s%s.",
+    mvprintw(4, 2, "Peer reach the Vatican before you%s%s.",
              d->winner_name[0] ? " — winner: " : "",
              d->winner_name[0] ? d->winner_name : "");
     mvprintw(6, 2, "Returning to menu...");

@@ -135,7 +135,7 @@ static void vic_update(Scene *s, float freq, float peak, uint64_t now_ms)
     (void)freq;
     (void)peak;
     VictoryScene *v = (VictoryScene *)s;
-    if (now_ms - v->enter_ms >= 1500)
+    if (now_ms - v->enter_ms >= 10000)
     {
         s->next_scene = SCENE_MENU; // auto-return
     }
@@ -146,8 +146,8 @@ static void vic_render(Scene *s)
     erase();
     ui_draw_border();
     mvprintw(2, 2, ">>> LINK ESTABLISHED <<<");
-    mvprintw(4, 2, "A quiet click. Then a distant voice: \"Pronto... Vaticano.\"");
-    mvprintw(6, 2, "Returning to menu...");
+    mvprintw(4, 2, "Congratulations on winning the race!\n");
+    mvprintw(6, 2, "Returning to menu...\n");
     draw_ascii_centered(VATICAN_WIN_ASCII, VATICAN_WIN_ASCII_LINES, 9, 5, 45);
     refresh();
 }
