@@ -25,3 +25,7 @@ Usage: ./race_to_vatican [--name NAME] [--port PORT] [--peer IP:PORT]
 --peer IP:PORT Peer address to race (optional; set on both machines)
 
 This uses UDP to transit the data over the network, it is suggested to use ND-guest, and find the ip address of your system by using 'ip a', and picking the 10.* address, port should be left the same. In IP:PORT, 
+
+The libraries or external dependencies used are, the CMAKE is portable to MacOS, Linux, and Windows without the need for special permissions:
+
+ncurses, portaudio, math, threads, at least C11
