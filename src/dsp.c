@@ -28,7 +28,7 @@ typedef struct
 #define BIQUAD_Q_BUTTER 0.70710678f
 
 /* In-band dominance requirement (fraction of total frame energy in band) */
-#define INBAND_ENERGY_MIN_FRAC 0.60f
+#define INBAND_ENERGY_MIN_FRAC 0.20f
 
 /* Quality thresholds for autocorrelation peak */
 #ifndef PEAK_NORM_THRESH
