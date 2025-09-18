@@ -141,7 +141,7 @@ static void level_update(Scene *s, float freq, float peak, uint64_t now_ms)
             net_send_state(&g_net, freq, ls->progress01, status, now_ms);
             ls->announced_win = true;
         }
-
+        s->next_scene = lv->next_scene_id[next_id];
         return;
     }
     
