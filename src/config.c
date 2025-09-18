@@ -338,7 +338,7 @@ const Level g_levels[SCENE_COUNT] = {
         .tolerance_hz = 15.0f,
         .hold_ms = 1500,
         .time_limit_ms = 0,
-        .next_scene_id = {SCENE_MENU,SCENE_MENU,SCENE_MENU}},
+        .next_scene_id = {SCENE_VICTORY,SCENE_VICTORY,SCENE_VICTORY}},
 
     // SCENE_FLORIDA
 
