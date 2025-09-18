@@ -12,3 +12,8 @@ The code here is suppose to mirror the bare bones computers that the early 70s h
 This repository is meant as a way to emulate the old MUD games, and is extremely tunable as well as modifiable. There is a simple game class that in config.c creates the map for moving between different trunk lines, and everything is abstracted away so the code can be defined in any way you think it should be. Want to add a timer? Or a watchdog that catches you if you are on a trunk line? Feel free to do so. Want to exploit the memory leaks probably in this game? Go right ahead! This should hopefully be a taste of the phreaking culture and should be fun.
 
 This game does require an Arduino based phreaking device or some noise generation. You can also create a virtual sound card adapter and pipe your audio from a python script through to play as well!
+
+To make the program, utilize CMAKE to build instead of a make file. In order to use CMAKE you need to create a build directory at the same level as source, and then run 'cmake ..' in the directory. To build run 'cmake --build .' in that same directory. The executable is 'race_to_vatican'.
+
+In order to utilize the net features, follow:
+
