@@ -1,4 +1,3 @@
-
 # Race to the Vatican
 
 Race to the Vatican is a game based on telecommunications phreaking culture that was dominant in the early 70s. Steve Wozniak famously used this method to almost communicate with the Pope by pretending to be someone who he was not, and that was the inspiration for the game.
@@ -15,5 +14,14 @@ This game does require an Arduino based phreaking device or some noise generatio
 
 To make the program, utilize CMAKE to build instead of a make file. In order to use CMAKE you need to create a build directory at the same level as source, and then run 'cmake ..' in the directory. To build run 'cmake --build .' in that same directory. The executable is 'race_to_vatican'.
 
-In order to utilize the net features, follow:
+In order to utilize the net features, follow this:
 
+Usage: ./race_to_vatican [--name NAME] [--port PORT] [--peer IP:PORT]
+
+--name NAME    Your display name (default: player)
+
+--port PORT    UDP bind port (default: 55555)
+
+--peer IP:PORT Peer address to race (optional; set on both machines)
+
+This uses UDP to transit the data over the network, it is suggested to use ND-guest, and find the ip address of your system by using 'ip a', and picking the 10.* address, port should be left the same. In IP:PORT, 
